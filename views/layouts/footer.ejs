@@ -1,0 +1,24 @@
+</div>
+<p class="text-center bottom-of-page">
+    &copy; Shohan
+</p>
+</main>  
+<script>
+  var toggle =true;
+  $('#sidebar-toggle').click(function(){
+      if(toggle){
+        $('.sidebar-wrapper').hide();
+        $('.main-body').css('margin-left','0px');
+        toggle = false;
+      }else{
+        $('.sidebar-wrapper').show();
+        $('.main-body').css('margin-left','180px');
+        toggle = true;
+      }
+      
+  });
+  
+
+</script>
+</body>
+</html>

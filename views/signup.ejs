@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=site_title%></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            overflow-x:hidden;
+            background:   linear-gradient(to right, #c5deea 0%,#8abbd7 31%,#066dab 100%);
+        }
+     .c-blue{
+         background: #7b1fa2 ;
+         padding: 30px 20px 20px 20px;
+         border-radius: 4px;
+         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+        margin-top: 100px;
+     }
+     .form-group label {
+         color:#fff;
+     }
+     .btn-info{
+        background:  #8bc34a!important;
+        border-color:#8bc34a;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+        
+        outline:none !important;
+     }
+     .bottom-of-page{
+         font-family: 'Times New Roman', Times, serif;
+         bottom: 0;
+         position: absolute;
+         left: 45%;
+         color:#fff;
+         font-size:14px;
+     }
+     .bottom-of-page:hover{
+         color:#eee;
+         text-shadow:0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); 
+     }
+     .btn-outline-success{
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         background: transparent;
+         border:2px solid #00c851;
+         color:#fff;
+         font-weight: bold;
+         
+     }
+     .btn-rounded{
+         border-radius: 10em !important;
+
+     }
+     .mr50{
+         margin:50px !important;
+     }
+
+    </style>
+</head>
+<body>
+  <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+          <a href="/" class="btn btn-outline-success mr50">Back to Login</a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+          
+    <form class="form-horizontal c-blue" action="/signup" method="POST">
+        <input type="hidden" value="<%=token%>" name="token">
+     <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+            </div>
+     </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Email:</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="password">Password:</label>
+        <div class="col-sm-10">          
+          <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+        </div>
+      </div>
+      <div class="form-group">        
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">        
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-info">Submit</button>
+        </div>
+      </div>
+    </form>
+ 
+  
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4"></div>
+  </div>
+
+<p class="text-center bottom-of-page">
+  &copy; Shohan
+</p>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<%- include('layouts/header') %>
+<%if(user){%>
+     <div class="row">
+             <div class="col-md-4">
+                 <div class="card">
+                     <div class="card-icon card-purple">
+                         <i class="fa fa-user-circle"></i>
+
+                     </div>
+                     <div class="card-content">
+                         <p>Users Information</p>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-md-4">
+                <div class="card">
+                    <div class="card-icon card-light-green">
+                        <i class="fa fa-address-book"></i>
+
+                    </div>
+                    <div class="card-content">
+                        <p>Address Book</p>
+                        
+                    </div>
+                </div>
+             </div>
+             <div class="col-md-4">
+                <div class="card">
+                    <div class="card-icon card-amber">
+                        <i class="fa fa-area-chart"></i>
+
+                    </div>
+                    <div class="card-content">
+                        <p>Area Info</p>
+                    </div>
+                </div>
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-md-4">
+                <div class="containers bc-white">
+                    abc
+                </div> 
+             </div>
+             <div class="col-md-8">
+                    <div class="containers bc-white">
+                            abc
+                    </div> 
+             </div>
+            
+         </div>
+        
+         <div class="containers bc-white">
+             abc
+         </div>
+    <h1 style="text-align: center;"><%=user.name%></h1>
+<% } %>
+<%- include('layouts/footer') %>

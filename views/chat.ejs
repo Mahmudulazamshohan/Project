@@ -1,0 +1,51 @@
+<%- include('layouts/header') %>
+ <div class="row">
+     <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="containers bc-white">
+            <div class="__box">
+                    <% data.forEach(function(d){%>
+
+                    
+                    <div class="__message" >
+                            <div class="user__message">
+                                      <img src="https://ld-wp.template-help.com/wordpress_62555/johnnygo/assets/images/image-man-1.png" alt="">   <p style="float:right"> <%=d.message_text %></p>
+                            </div>
+                         </div>
+                         <%  }); %>
+                         <div class="__message">
+                             <div class="other__message" >
+                                    <img src="https://ld-wp.template-help.com/wordpress_62555/johnnygo/assets/images/image-man-1.png" alt="">  <p style="float:left">Hello</p>
+                             </div>     
+                         </div>
+                         <div class="__message" >
+                                 <div class="user__message">
+                                        <img src="https://ld-wp.template-help.com/wordpress_62555/johnnygo/assets/images/image-man-1.png" alt="">  <p style="float:right">My name is Shohan</p>
+                                 </div>
+                              </div>
+                              <div class="__message">
+                                  <div class="other__message" >
+                                           <img src="https://ld-wp.template-help.com/wordpress_62555/johnnygo/assets/images/image-man-1.png" alt="" ><p style="float:left">What is your name now?</p>
+                                  </div>     
+                              </div>
+            </div>
+            
+           <div class="chat__box">
+               <div class="chat__area">
+                   <form action="/admin/dashboard" method="GET" id="form">
+                        <textarea name="chat" id="chat-action"></textarea>
+
+                   </form>
+                    <script>
+                      var chatAction = document.getElementById('chat-action');
+                      var form = document.getElementById('form');
+                       chatAction.onkeypress =  function(event){
+                           if(event.keyCode === 13){form.submit();}
+                        }
+                    </script>
+               </div>
+               
+           </div>   
+         </div> 
+     </div>
+ </div>
+<%- include('layouts/footer') %>

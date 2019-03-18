@@ -1,0 +1,20 @@
+<%- include('layouts/header') %>
+  <div class="row">
+      <div class="col-md-3">
+
+      </div>
+      <div class="col-md-6 card" style="padding: 10px;">
+          <form method="POST" action="/admin/store-file" enctype="multipart/form-data">
+            <input type="hidden" name="_csrf" value="<%=csrfToken%>" >
+            <div class="form-group">
+                <input class="form-control input-sm" type="file" style="margin-bottom: 10px;" name="images" >
+            </div>
+
+              
+              <input type="text" class="form-control" name="name" style="margin-bottom: 10px" >
+              <button class="btn btn-info">Submit</button>
+          </form>
+      </div>
+      <div class="col-md-3"></div>
+  </div>
+<%- include('layouts/footer') %>
